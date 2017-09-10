@@ -1,0 +1,11 @@
+{
+  "name": "td-entity",
+  "version": "0.0.0",
+  "main": "Entity.js",
+  "author": "Norman Meier <norman.meier@tuta.io>",
+  "license": "MIT",
+  "dependencies": {
+    "gl-matrix": "^2.4.0",
+    "td-aabb": "file:../td-aabb"
+  }
+}

@@ -9,8 +9,12 @@ export default class Entity {
   }
 
   move(newPosition) {
-    if (this.parent) this.parent.moveEntity(this, newPosition);
-    else this.position = vector;
+    if (this.parent) {
+      return this.parent.moveEntity(this, newPosition);
+    } else {
+      this.position = vector;
+      return false;
+    }
   }
 
   get aABB() {

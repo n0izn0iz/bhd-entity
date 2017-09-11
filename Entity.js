@@ -2,9 +2,15 @@ import { vec2 } from "gl-matrix";
 import AABB from "td-aabb";
 
 export default class Entity {
-  constructor() {
-    this.position = vec2.fromValues(5, 5);
-    this.size = 2;
+  constructor({ position, size, parent = null }) {
+    this.position = vec2.fromValues(position[0], position[1]);
+    this.size = size;
+    if (parent !== null) parent.insert(this);
+  }
+
+  move(newPosition) {
+    if (this.parent) this.parent.moveEntity(this, newPosition);
+    else this.position = vector;
   }
 
   get aABB() {

@@ -5,7 +5,6 @@ export default class Entity {
   constructor({ position, size, parent = null }) {
     this.position = vec2.fromValues(position[0], position[1]);
     this.size = size;
-    if (parent !== null) parent.insert(this);
   }
 
   move(newPosition) {
